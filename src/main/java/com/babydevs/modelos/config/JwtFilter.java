@@ -24,6 +24,8 @@ public class JwtFilter extends GenericFilterBean{
 			throws IOException, ServletException {
 		HttpServletRequest httpServletRequest = (HttpServletRequest) request;
 		String authHeader =  httpServletRequest.getHeader("authorization");
+		System.out.println(httpServletRequest.getMethod());
+		System.out.println(httpServletRequest.getRequestURI());
 		if( ("POST".equals(httpServletRequest.getMethod())) && httpServletRequest.getRequestURI().contains("/api/asesorados/") ) {
 			
 		}else if (  ("POST".equals(httpServletRequest.getMethod())) ||
