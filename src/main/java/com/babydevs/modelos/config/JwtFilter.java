@@ -24,9 +24,11 @@ public class JwtFilter extends GenericFilterBean{
 			throws IOException, ServletException {
 		HttpServletRequest httpServletRequest = (HttpServletRequest) request;
 		String authHeader =  httpServletRequest.getHeader("authorization");
-		if (  ("POST".equals(httpServletRequest.getMethod())) |
+		if( ("POST".equals(httpServletRequest.getMethod())) && httpServletRequest.getRequestURI().equals("/api/asesorados/") ) {
+			chain.doFilter(request, response);
+		}else if (  ("POST".equals(httpServletRequest.getMethod())) ||
 				( ("GET".equals(httpServletRequest.getMethod())) &&
-						(! httpServletRequest.getRequestURI().contains("/api/productos/") )  ) |
+						(! httpServletRequest.getRequestURI().contains("/api/asesores/") )  ) |
 					  ("PUT".equals(httpServletRequest.getMethod())) ||
 					  ("DELETE".equals(httpServletRequest.getMethod()))
 					) {
