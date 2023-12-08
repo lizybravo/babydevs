@@ -81,7 +81,7 @@ public class AsesoradoService {
 		Optional<Asesorado> userByEmail = asesoradoRepository.findByEmail(asesorado.getEmail());
 		if(userByEmail.isPresent()) {
 			Asesorado ases = userByEmail.get();
-			if(ases.getPassword().equals(asesorado.getPassword())) {
+			if(passwordEncoder.matches(asesorado.getPassword(), ases.getPassword())) {
 				return true;
 			}//if password equals
 		}//if isPresent
