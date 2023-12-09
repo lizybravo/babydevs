@@ -4,7 +4,7 @@ body{
   background: linear-gradient(180deg, #16D6FA 0%, #FFF 86.11%);
   background-repeat: no-repeat;
   background-attachment:fixed;
-
+  font-family: 'Montserrat', sans-serif;
 }
 
 .card {
@@ -12,13 +12,12 @@ body{
 /* border-bottom-right-radius: 40px;  Borde inferior derecho redondeado */
  margin-bottom: 3%;
  background-color: #ffffff;
- padding: 1%;   
+ padding: 1%;
 }
 
 
 .text-justify {
  text-align: justify;
- font-family: sans-serif;
 }
 
 
@@ -57,8 +56,8 @@ body{
 
 .cardsEquipo{
   border: 1px solid #000;
-  object-fit:contain; 
-  margin-bottom: 25px; 
+  object-fit:contain;
+  margin-bottom: 25px;
   margin-right: 25px;
   background: #fff;
   box-shadow: 5px 5px 0px 0px  #000;
@@ -159,7 +158,7 @@ body{
 }
 
 
-@media(max-width: 576px) { 
+@media(max-width: 576px) {
  .card-text {
    font-size: 0.8rem;
  }
@@ -171,16 +170,16 @@ body{
 }
 
 .redes {
-  
+
   text-align: right;
 } */
 /*Footer, logo y redes*/
 
 
 
-/*Carrusel*/ 
-.carousel { 
-  width: 90%; 
+/*Carrusel*/
+.carousel {
+  width: 90%;
   margin: auto ;
 }
 
@@ -226,7 +225,7 @@ z-index: 1; /* El méndigo botón se me ponía atrás de la imagen así que tuve
 right: -20px; /* Coloca el botón > a la derecha */
 }
 
-@media(max-width: 576px) { 
+@media(max-width: 576px) {
   .slick-prev, .slick-next {
     width: 3rem;
     height: 3rem;
@@ -330,7 +329,6 @@ border-bottom: 4px solid #f13e8f;
 
 .footer_link a{
 	color: white;
-	
 	text-decoration: none;
 }
 

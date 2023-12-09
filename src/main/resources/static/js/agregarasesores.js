@@ -131,7 +131,7 @@ function mostrarExitoImagen(mensaje) {
     }
 
   function enviar () {
-   let nombre = document.getElementById("Name").value;
+   let name = document.getElementById("Name").value;
    let correo = document.getElementById("Email").value;
    let inputradiolist = Array.from(document.getElementsByClassName ("input-radio"));
    let inputchekedlist = Array.from(document.getElementsByClassName ("check-input"));
@@ -141,21 +141,32 @@ function mostrarExitoImagen(mensaje) {
    let habilidadesAdicionales = inputchekedlist.filter(x=>x.checked).map(y=>y.value);
    let horarios = inputhorariolist.filter(x=>x.checked).map(y=>y.value);
    let precio = inputpreciolist.filter(x=>x.checked).map(y=>y.value);
+   let img = imagen;
+   let id = -1;
    let body={
-    nombre,correo, habilidadesPrincipales,habilidadesAdicionales, horarios, precio, imagen
+    id,
+    name,
+    correo,
+    habilidadesPrincipales,
+    habilidadesAdicionales,
+    horarios,
+    precio,
+    img
    }
-
+   agregarAasesores(body);
    console.log(body);
 }
 
-function agregarAasesores(nombre, habilidadesPrincipales, habilidadesAdicionales, horarios, precio, imagen){
+function agregarAasesores(body){
     let asesoresTexto = localStorage.getItem("listaAsesores");
     let lista;
     if(!asesoresTexto){
-      lista = {asesores:[],total:0};
+      lista = { asesores: listaAsesores, total: listaAsesores.length};
     }else{
       lista = JSON.parse(localStorage.getItem("listaAsesores"));
     }
-    lista.asesores.push({nombre, habilidadesPrincipales, habilidadesAdicionales, horarios, precio, imagen});
+    lista.total += 1;
+    body.id = lista.total;
+    lista.asesores.push(body);
     localStorage.setItem("listaAsesores",JSON.stringify(lista));
   }

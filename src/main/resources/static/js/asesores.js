@@ -13,14 +13,17 @@ function modalFormat (info) {
             </div>
             <div class= "modal-body">
             <img id="imagenesAsesores" src="${info.img}" style="heigth:550px; width:250px; display: flex; align-items: center;">
-
-            <p id="descripcionAsesor"> ${info.description} </p>
+            <p id="descripcionAsesor">
+              Habilidad principal: ${info.habilidadesPrincipales} <br/><br/>
+              Habilidades adicionales: ${info.habilidadesAdicionales} <br/><br/>
+              Horario: ${info.horarios}
+             </p>
             </div>
             <div class="modal-precio">
-              <h4 class="modal-price fs-5" id="exampleModalLabel">${info.precio}</h4>
+              <h4 class="modal-price fs-5" id="exampleModalLabel">${info.precio} / hora</h4>
             </div>
             <div class="modal-footer">
-              <button type="button" onclick="agregarACarrito(${info.id}, '${info.name}', '${info.img}')" class="btn2 btn-secondary" data-bs-dismiss="modal">Agregar asesoría</button>
+              <button type="button" onclick="agregarACarrito(${info.id}, '${info.name}', '${info.horarios[0]}', '${info.precio}', '${info.img}')" class="btn2 btn-secondary boton-item" data-bs-dismiss="modal">Agregar asesoría</button>
             </div>
           </div>
         </div>
@@ -34,7 +37,7 @@ function addItem(item) {
           <img id="imagenAsesor" src="${item.img}" class="card-img-top" alt="image">
           <div class="card-body" >
               <h5 class="card-title" style="text-align: center">${item.name}</h5>
-              <p class="card-text" style="text-align: center">${item.habilidad}</p>
+              <p class="card-text" style="text-align: center">${item.habilidadesPrincipales}</p>
               <a href="#" class="btn btn-primary" id="btn-asesores" data-bs-toggle="modal" data-bs-target="#exampleModal_${item.id}">Ver más</a>
           </div>
       </div>
@@ -44,7 +47,7 @@ function addItem(item) {
   itemsContainer.innerHTML += itemHTML;
 }
 
-function agregarACarrito(id, nombre, img){
+function agregarACarrito(id, nombre, horario, precio, img){
   let carritoTexto = localStorage.getItem("carrito");
   let carrito;
   if(!carritoTexto){
@@ -52,7 +55,8 @@ function agregarACarrito(id, nombre, img){
   }else{
     carrito = JSON.parse(localStorage.getItem("carrito"));
   }
-  carrito.asesores.push({id,nombre,img});
+  carrito.asesores.push({id,nombre,horario, precio, img});
+  carrito.total += 1;
   localStorage.setItem("carrito",JSON.stringify(carrito));
 }
 
@@ -60,8 +64,15 @@ function agregarACarrito(id, nombre, img){
 
 ///MAIN ASESORES--- NO MOVER POR FAVOR
 document.addEventListener("DOMContentLoaded", function () {
+  let asesoresTexto = localStorage.getItem("listaAsesores");
+  let lista;
+  if(!asesoresTexto){
+    lista = { asesores: listaAsesores, total: listaAsesores.length};
+  }else{
+    lista = JSON.parse(localStorage.getItem("listaAsesores"));
+  }
 
-  listaAsesores.forEach(a => addItem(a));
+  lista.asesores.forEach(a => addItem(a));
 
   // Agrega los modales al final del documento
   const modalContainer = document.getElementById("modal-container");
@@ -69,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let modalContent = "";
 
-  listaAsesores.forEach(modalInfo => {
+  lista.asesores.forEach(modalInfo => {
     modalContent += modalFormat(modalInfo);
   });
 

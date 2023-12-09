@@ -209,7 +209,7 @@ formulario_login.addEventListener('submit', (e) => {
     }
 });
 
-//: Agregar botón de cierre de sesión: Resetear todo 
+//: Agregar botón de cierre de sesión: Resetear todo
 document.getElementById("btn_cerrarSesion").addEventListener("click", () => {
     //
     localStorage.removeItem("usuarioActual");

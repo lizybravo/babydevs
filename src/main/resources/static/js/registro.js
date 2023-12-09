@@ -23,7 +23,7 @@ function anchoPage(){
         caja_trasera_login.style.display = "none";
         formulario_login.style.display = "block";
         contenedor_login_register.style.left = "0px";
-        formulario_register.style.display = "none";   
+        formulario_register.style.display = "none";
     }
 }
 

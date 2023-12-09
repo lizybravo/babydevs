@@ -55,9 +55,9 @@ body{
   .imguno {
     order: -1;
     margin-top: 20px;
-    width: 80%; 
-    max-width: 300px; 
-    margin-right: auto; 
+    width: 80%;
+    max-width: 300px;
+    margin-right: auto;
     margin-top: 70px;
     margin-left: 15px;
   }
@@ -65,9 +65,9 @@ body{
   .izq{
     order: -1;
     margin-top: 20px;
-    width: 80%; 
-    max-width: 300px; 
-    margin-right: auto; 
+    width: 80%;
+    max-width: 300px;
+    margin-right: auto;
     margin-left: 15px;
   }
 }
@@ -106,21 +106,29 @@ body{
     font-size: 35px;
 }
 
+#uno{
+  font-size: 35px;
+}
 
-
+#dos{
+  font-size: 25px;
+}
 
 .tarjetitasayuda {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     text-align: center;
     padding: 5%;
   }
-  
+
   .tarjeta {
-    border: 3px solid #000;
-    padding: 20px; 
-    width: calc(33.33% - 20px); 
-    box-sizing: border-box; 
+    border: 3px solid #F13E8F;
+    padding: 20px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 10px 10px 2px #A06DFF;
+    margin: 10px;
   }
 
   .titletrjt{
@@ -136,33 +144,35 @@ body{
   @media screen and (max-width: 768px) {
     .tarjetitasayuda {
       flex-direction: column;
-      align-items: center; 
-      padding: 3%; 
+      align-items: center;
+      padding: 3%;
     }
-    
+
     .tarjeta {
-      width: 100%; 
-      margin-bottom: 20px; 
+      width: 100%;
+      margin-bottom: 20px;
     }
   }
-  
+
 
    /* ------------Separador 2---------- */
-  
+
   .imgdos{
     flex: 1;
     text-align: center;
   }
-  
+
   .imgdos img {
-    box-shadow: 15px 15px 2px rgb(255, 255, 255);
-    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 15px 15px 2px #F13E8F;
+    border: 2px solid #F13E8F;
     border-radius: 20px;
+    padding: 20px;
   }
-  
+
   .sep2{
-    font-size: 30px;
-    color: white;
+    font-style: italic;
+    font-size: 40px;
+    color: #FFC603;
     background-color: #000000;
     padding: 18px;
     display: block;
@@ -179,20 +189,20 @@ body{
 
 @media screen and (max-width: 768px) {
   .sep2 {
-    flex-direction: column; 
-    text-align: center; 
-    padding: 3%; 
-    font-size: 20px; 
+    flex-direction: column;
+    text-align: center;
+    padding: 3%;
+    font-size: 20px;
   }
-  
+
   .izq, .imgdos {
-    width: 100%; 
-    text-align: center; 
-    margin-bottom: 20px; 
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
   }
-  
+
   .imgdos {
-    order: -1; 
+    order: -1;
   }
 }
 
@@ -252,7 +262,7 @@ body{
 .verde:hover,
 .amarillo:hover,
 .rosa:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .colorestrjrt {
@@ -268,9 +278,9 @@ body{
 @media (max-width: 767px) {
   .trjt {
     flex-direction: row;
-    width: 60%; 
+    width: 60%;
     margin-left: -20px;
-    
+
   }
 }
 
@@ -321,7 +331,7 @@ body{
     touch-action: manipulation;
     font-family: sans-serif;
   }
-  
+
   .button-56:after {
     background-color: #000000;
     border-radius: 34px;
@@ -336,22 +346,31 @@ body{
     transition: transform .2s ease-out;
     z-index: -1;
   }
-  
+
   .button-56:hover:after {
     transform: translate(0, 0);
   }
-  
+
   .button-56:active {
     background-color: #ffdeda;
     outline: 0;
   }
-  
+
   .button-56:hover {
     outline: 0;
   }
-  
+
   @media (min-width: 768px) {
     .button-56 {
       padding: 0 40px;
     }
   }
+
+.sep3{
+  background-color: #000000;
+  font-size: 30px;
+  color: white;
+  padding: 18px;
+  display: block;
+  text-align: center;
+}
