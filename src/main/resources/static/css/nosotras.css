@@ -1,0 +1,358 @@
+/* estilos página de Nosotros */
+
+body{
+  background: linear-gradient(180deg, #16D6FA 0%, #FFF 86.11%);
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+
+}
+
+.card {
+/* border-top-left-radius: 40px;  Borde superior izquierdo redondeado */
+/* border-bottom-right-radius: 40px;  Borde inferior derecho redondeado */
+ margin-bottom: 3%;
+ background-color: #ffffff;
+ padding: 1%;   
+}
+
+
+.text-justify {
+ text-align: justify;
+ font-family: sans-serif;
+}
+
+
+.card:hover {
+ background-color:#83c02e ;
+}
+
+
+.card-text {
+ text-align: justify;
+ align-items: center;
+}
+
+#card-shadow {
+  padding: 5%;
+  box-shadow: 15px 15px 0px 0px black;
+}
+
+
+
+
+.column-list {
+ column-count: 2;
+ column-gap: 5px;
+}
+
+
+.column-list li {
+ margin-bottom: 5px 0;
+}
+
+.container {
+ padding-top: 5%;
+}
+
+
+.cardsEquipo{
+  border: 1px solid #000;
+  object-fit:contain; 
+  margin-bottom: 25px; 
+  margin-right: 25px;
+  background: #fff;
+  box-shadow: 5px 5px 0px 0px  #000;
+  min-height: 700px;
+}
+
+/* Styles del nombre */
+.nombreAsesor{
+  text-align: center;
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+.descrip{
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+}
+
+/* Redes Sociales de contacto */
+.contactoNosotras{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.linkedin2{
+  display: flex;
+  float: right;
+  align-items: center;
+  padding: 5px;
+
+  animation-name: wobble;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+/* .linkedin2:hover{
+  background-color: f5790c;
+} */
+
+
+.git{
+  display: flex;
+  float: right;
+  align-items: center;
+  padding: 5px;
+  transition: 0.3s;
+
+  animation-name: wobble;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+/* .git:hover{
+  transform: scale(1.3);
+} */
+
+.cv{
+  display: flex;
+  float: right;
+  align-items: center;
+  padding: 5px;
+  transition: 0.3s;
+
+  animation-name: wobble;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+/* .cv:hover{
+  transform: scale(1.3);
+} */
+
+@keyframes wobble {
+  0% {transform: translateX(0) rotate(0deg);}
+  15% {transform: translateX(-30px) rotate(-5deg);}
+  30% {transform: translateX(15px) rotate(3deg);}
+  45% {transform: translateX(-15px) rotate(-3deg);}
+  60% {transform: translateX(9px) rotate(2deg);}
+  75% {transform: translateX(-6px) rotate(-1deg);}
+  100% {transform: translateX(0) rotate(0deg);}
+}
+/* Redes Sociales de contacto */
+
+#babyDevs{
+  text-align: center;
+  font-size: xxx-large;
+}
+
+#conoceAlEquipo{
+  text-align: center;
+  font-size: 60px;
+  color: #f5790c;
+}
+
+#unete{
+  font-size: 60px;
+  color: #f5790c;
+}
+
+
+@media(max-width: 576px) { 
+ .card-text {
+   font-size: 0.8rem;
+ }
+}
+
+/*Footer, logo y redes*/
+/* .logo {
+  text-align: center;
+}
+
+.redes {
+  
+  text-align: right;
+} */
+/*Footer, logo y redes*/
+
+
+
+/*Carrusel*/ 
+.carousel { 
+  width: 90%; 
+  margin: auto ;
+}
+
+.slick-slide { /* Este le da espacio entre cada "contenedor" de img.*/
+  padding: 50px;
+  border-radius: 20px;
+}
+.slick-slide img {
+display: block;
+margin:auto;
+max-width: 100%;
+height: 80%;
+border-radius: 40px;
+border: 1.5px solid #000;
+/* border-style:outset; */
+}
+
+.description {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.slick-prev, .slick-next {
+background-color: #83c02eca;
+color: #f13e8f;
+padding: 10px;
+font-size: 30px;
+border: none;
+border-radius: 50%;
+width: 4rem;
+height: 4rem;
+position: absolute;
+top: 50%; /* Manda los botones al centro del carrusel. */
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.slick-prev {
+left: -40px; /* Coloca el botón < a la izquierda */
+z-index: 1; /* El méndigo botón se me ponía atrás de la imagen así que tuve que ponerle este para que lo mandara al frente jajaja*/
+}
+
+.slick-next {
+right: -20px; /* Coloca el botón > a la derecha */
+}
+
+@media(max-width: 576px) { 
+  .slick-prev, .slick-next {
+    width: 3rem;
+    height: 3rem;
+  }
+  .slick-prev {
+    left: -12px; /* Coloca el botón < a la izquierda */
+    z-index: 1; /* El méndigo botón se me ponía atrás de la imagen así que tuve que ponerle este para que lo mandara al frente jajaja*/
+    }
+
+    .slick-next {
+      right: 9px /* Coloca el botón > a la derecha */
+      }
+ }
+
+ .correo{
+  font-size: 30px;
+ }
+
+ @media(max-width: 576px){
+  .correo{
+    font-size: 20px;
+  }
+ }
+
+
+
+/*navbar*/
+.navbar {
+background-color: white;
+border-radius: 0 0 40px 40px;
+box-shadow: 15px 15px 0px -1px #000000;
+}
+
+/*indicador de página*/
+
+.nav-item:hover{
+border-bottom: 4px solid #f13e8f;
+}
+
+/*Cierra estilo del navbar*/
+
+/*footer*/
+.footer{
+	background-color: #000000;
+	background-image: url(../src/footer.svg);
+	background-position: center;
+	background-size: cover;
+	transition: all 1s ease;
+	padding: 1%;
+}
+
+#footer_container{
+	margin: 1%;
+}
+
+#footer_div{
+	margin: 1%;
+}
+#footer_logo{
+	width: 250px;
+
+}
+
+#footer_logo:hover{
+	transform: translateY(-5px);
+	transition: .6s;
+}
+.footer_divs{
+	min-width: 250px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.rs_icons{
+	margin-right: 10px;
+	width: 20px;
+}
+.rs_icons:hover{
+	background-color: #f13e8f;
+	transform: translateY(-5px);
+	transition: .3s;
+	width: 30px;
+}
+.footer_links{
+	margin-top: 2%;
+	margin-left: 10px;
+	align-self: center;
+}
+.footer_links ul{
+	list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_link{
+	font-size: 10px;
+	text-align: none;
+}
+
+.footer_link a{
+	color: white;
+	
+	text-decoration: none;
+}
+
+#footer_btn{
+	color: white;
+	width: 140px;
+	height: 40px;
+	border-radius: 20px;
+	border: 1px solid #FFF;
+	box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
+}
+
+#footer_btn:hover{
+	background-color: #f13e8f;
+	width: 160px;
+	transform: translateY(-5px);
+	transition: .5s;
+}
+
+/*fin del footer*/
+
+#enlaces{
+  display: grid;
+  text-align: left;
+}

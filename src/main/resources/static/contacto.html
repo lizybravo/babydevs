@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contacto</title>
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="./css/Contacto.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- envio de formilario -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+		(function () {
+			emailjs.init("9VVYCZOUyMHhTOeeS");
+		})();
+	</script>
+
+<style>
+	/*/grid*/
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	min-height: 100%;
+    background: linear-gradient(180deg, #F13E8F 0%, #FFF 100%);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+
+html{
+	height: 100%;
+}
+
+.grid-container > *{
+   text-align: center;
+}
+
+.header{
+	grid-area: header;
+}
+
+.main{
+	grid-area: main;
+}
+
+.footer{
+	grid-area: footer;
+	background-color: rgb(0, 0, 0);
+}
+
+/*Teléfono*/
+.grid-container{
+	display: grid;
+	gap: 10px;
+	grid-template-areas:
+	"header"
+	/* "navbar" */
+	"main"
+	"footer"
+	;
+}
+
+/*Para tablet*/
+@media(min-width:768px){
+	.grid-container{
+		grid-template-columns: 200px auto ;
+		grid-template-rows: auto;
+		grid-template-areas:
+		"header header"
+		/* "navbar navbar" */
+		"main main"
+		"footer footer";
+	}
+}
+
+/*Para escritorio*/
+@media(min-width:900px){
+	.grid-container{
+		grid-template-columns: 200px auto ;
+		grid-template-rows: auto;
+		grid-template-areas:
+		"header header header"
+		/* "navbar navbar navbar" */
+		"main main main"
+		"footer footer footer";
+	}
+}
+
+/*grid*/
+</style>
+
+</head>
+
+<body class="grid-container">
+
+	<header class="header">
+		<nav class="navbar navbar-expand-sm bg-body-tertiary"></nav>
+	</header>
+
+	<main class="main">
+		<div class="title" id="CONTACTAR">
+			<h1 style="text-align: center;" id="agregar-as"><b>¿Necesitas contactar con nosotras?</b></h1>
+			<br/>
+			<h4 style="text-align: center; font-style: italic;" id="agregar-as"><b>Solo envíanos un mensajito y te responderemos lo más pronto posible :3</b></h4>
+		</div>
+		<br>
+		<br>
+
+		<!--aquí inicia el formulario-->
+		<div class="p-4 container_contacto">
+		<form action="" class="formulario" id="formulario">
+
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe" required>
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Este campo solo permite ingresar letras</p>
+			</div>
+
+
+			<!-- Grupo: Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo"
+						placeholder="correo@dominio.com" required>
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Caracteres permitidos: letras, números, puntos, guión y guión bajo</p>
+			</div>
+
+			<!-- Grupo: Teléfono -->
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Teléfono</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567" required>
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Este campo solo permite ingresar 10 dígitos</p>
+			</div>
+
+			<!--Grupo: Mensaje-->
+			<div class="formulario__grupo" id="grupo__mensaje">
+				<label for="mensaje" class="formulario__label">Mensaje</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="mensaje" id="mensaje"
+						placeholder="Escribe tu mensaje" required>
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Este campo solo permite ingresar letras</p>
+			</div>
+
+			<!-- Botton-->
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar" id="boton">
+				<input type="submit" class="btn btn-success" id="button" value="Enviar">
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Formulario enviado exitosamente!</p>
+			</div>
+
+			<div id="alerts">
+			</div>
+
+		</form>
+		</div>
+
+	</main>
+
+
+	<footer class="footer">
+		<div class="container text-center">
+		</div>
+	</footer>
+
+
+	<!-- Bootstrap -->
+
+	<script src="js/contacto.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/alertsbootstrap.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

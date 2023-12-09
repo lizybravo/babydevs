@@ -1,0 +1,357 @@
+body{
+  background: linear-gradient(180deg, #16D6FA 0%, #FFF 86.11%);
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+
+}
+
+
+ /* ------------Lo primero---------- */
+
+ #babydevstitle{
+    font-size: 50px;
+    color: #000000;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    font-family: sans-serif;
+  }
+#laayuda{
+    font-size: 25px;
+    font-family: sans-serif;
+}
+
+.primero{
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.izq{
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imguno{
+  flex: 1;
+  text-align: center;
+}
+
+.imguno img {
+  box-shadow: 15px 15px 2px rgba(0, 0, 0, 1);
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+@media (max-width: 767px) {
+  .primero {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15px;
+  }
+
+  .imguno {
+    order: -1;
+    margin-top: 20px;
+    width: 80%; 
+    max-width: 300px; 
+    margin-right: auto; 
+    margin-top: 70px;
+    margin-left: 15px;
+  }
+
+  .izq{
+    order: -1;
+    margin-top: 20px;
+    width: 80%; 
+    max-width: 300px; 
+    margin-right: auto; 
+    margin-left: 15px;
+  }
+}
+
+*{
+  font-family: sans-serif;
+}
+
+
+ /* ------------Separador 1---------- */
+
+ .sep1 {
+  background-color: #000000;
+  font-size: 30px;
+  color: white;
+  padding: 18px;
+  display: block;
+  text-align: center;
+}
+
+
+
+
+ /* ------------Tarjetas---------- */
+
+.tarjetas{
+    text-align: center;
+}
+
+.unotitle{
+    font-size: 25px;
+    text-align: center;
+}
+
+#dostitle{
+    font-size: 35px;
+}
+
+
+
+
+.tarjetitasayuda {
+    display: flex;
+    justify-content: space-between; 
+    text-align: center;
+    padding: 5%;
+  }
+  
+  .tarjeta {
+    border: 3px solid #000;
+    padding: 20px; 
+    width: calc(33.33% - 20px); 
+    box-sizing: border-box; 
+  }
+
+  .titletrjt{
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .descriptiontrjt{
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  @media screen and (max-width: 768px) {
+    .tarjetitasayuda {
+      flex-direction: column;
+      align-items: center; 
+      padding: 3%; 
+    }
+    
+    .tarjeta {
+      width: 100%; 
+      margin-bottom: 20px; 
+    }
+  }
+  
+
+   /* ------------Separador 2---------- */
+  
+  .imgdos{
+    flex: 1;
+    text-align: center;
+  }
+  
+  .imgdos img {
+    box-shadow: 15px 15px 2px rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+  }
+  
+  .sep2{
+    font-size: 30px;
+    color: white;
+    background-color: #000000;
+    padding: 18px;
+    display: block;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%;
+}
+
+.tres{
+  text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+  .sep2 {
+    flex-direction: column; 
+    text-align: center; 
+    padding: 3%; 
+    font-size: 20px; 
+  }
+  
+  .izq, .imgdos {
+    width: 100%; 
+    text-align: center; 
+    margin-bottom: 20px; 
+  }
+  
+  .imgdos {
+    order: -1; 
+  }
+}
+
+
+ /* ------------Tarjetas de colores---------- */
+
+.trjt {
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+  margin: 30px auto;
+  align-items: center;
+}
+
+.imgtrjt {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.imgtrjt img {
+  width: 200px;
+  height: 200px;
+}
+
+.txttrjt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.colorestxt {
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  text-align: justify;
+  color: #000;
+}
+
+
+.naranja,
+.verde,
+.amarillo,
+.rosa {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.naranja:hover,
+.verde:hover,
+.amarillo:hover,
+.rosa:hover {
+  transform: scale(1.05); 
+}
+
+.colorestrjrt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.trjt {
+  width: calc(40% - 20px);
+}
+
+@media (max-width: 767px) {
+  .trjt {
+    flex-direction: row;
+    width: 60%; 
+    margin-left: -20px;
+    
+  }
+}
+
+
+
+ .naranja {
+  background-color: #F5790C;
+  border-radius: 20px;
+ }
+ .verde{
+  background-color: #82C02E;
+  border-radius: 20px;
+ }
+
+ .amarillo{
+  background-color: #FFC603;
+  border-radius: 20px;
+ }
+
+.rosa{
+  background-color: #F13E8F;
+  border-radius: 20px;
+}
+
+
+/* ------------Botón bonito---------- */
+.button-56 {
+    align-items: center;
+    background-color: #F5790C;
+    border: 2px solid #111;
+    border-radius: 34px;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 20px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-family: sans-serif;
+  }
+  
+  .button-56:after {
+    background-color: #000000;
+    border-radius: 34px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+  }
+  
+  .button-56:hover:after {
+    transform: translate(0, 0);
+  }
+  
+  .button-56:active {
+    background-color: #ffdeda;
+    outline: 0;
+  }
+  
+  .button-56:hover {
+    outline: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .button-56 {
+      padding: 0 40px;
+    }
+  }
